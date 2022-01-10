@@ -2,7 +2,7 @@
 
 ### Task List
 
-- [x] React Native Study & Tutorial
+- [x] Study Basic
 - [ ] Clone Coding
 - [ ] Toy Project 
 
