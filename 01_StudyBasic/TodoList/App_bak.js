@@ -3,7 +3,6 @@ import { Platform, Button, SafeAreaView, ScrollView, StyleSheet, Text, TextInput
 import _ from 'underscore';
 import styled from 'styled-components/native';
 import Constants from 'expo-constants';
-import Item from './components/Item'
 
 const Row = styled.View`
   flex-direction: row;
@@ -15,6 +14,12 @@ const Input = styled.TextInput`
   color:white;
 `
 
+// 구조 분해 할당, Destructure
+const Item = ( { props } ) => {
+  console.log( props.item.id );
+  console.log( props.item.content );
+
+}
 
 // npm add underscore
 export default function App() {
@@ -61,7 +66,10 @@ export default function App() {
           <Button title="추가" onPress={ () => addItem() }/>
         </View>
         { list.map( item => (
-          <Item key={ item.id } item={ item } remove= { remove }/>
+          <TodoItem key={ item.id }>
+            <Text>{ item.content }</Text>
+            <Button color={'#f00'} title="삭제" onPress={ () => remove( item.id ) }/>
+          </TodoItem>
         ) ) }
       </ScrollView>
     </SafeAreaView>
@@ -77,7 +85,7 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row'
   },
-  TodoItem: {
+  todoItem: {
     width: 350,
     justifyContent: 'space-between',
     alignItems: 'center'
