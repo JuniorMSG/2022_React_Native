@@ -12,22 +12,15 @@
 ![image](https://user-images.githubusercontent.com/22822369/162566864-931db913-0be5-4ff7-ac33-c5eba1c777e0.png)
 
 
-## https://reactnative.dev/docs/accessibilityinfo
+## Docs List
+### https://reactnative.dev/docs/accessibilityinfo
+### https://docs.expo.io/versions/latest
 
-## https://docs.expo.io/versions/latest
 
-
-## 스타일 적용
-
+## Style
 ### npm add styled-components
-
 https://styled-components.com/
 
-### Task List
-
-- [x] Study Basic
-- [ ] Clone Coding
-- [ ] Toy Project 
 
 
 
